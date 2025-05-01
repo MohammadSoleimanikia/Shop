@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@theme {
+  --font-vaziri: "Vazirmatn", sans-serif;
+  /* You can also define other font groups */
+  --font-display: "Poppins", sans-serif;
+}
