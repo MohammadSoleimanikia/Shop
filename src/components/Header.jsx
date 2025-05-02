@@ -2,7 +2,7 @@ import Logo from "../UI/Logo";
 import SearchBar from "../UI/SearchBar";
 
 export default function Header() {
-    return <header className="flex gap-1 justify-between my-1 md:my-3 md:mx-2">
+    return <header  className="md:px-16 lg:px-24 flex gap-1 justify-between my-1 md:my-3 md:mx-2">
         <Logo/>
         <SearchBar/>
         <div>
