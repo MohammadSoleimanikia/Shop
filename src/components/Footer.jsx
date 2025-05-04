@@ -7,7 +7,7 @@ import NewsLetterSubscription from "./NewsletterSubscription";
 export default function Footer() {
     return (
         <>
-            <footer className="relative flex flex-col items-center">
+            <footer className="relative flex flex-col mt-10 items-center">
                 <NewsLetterSubscription />
                 <div className="bg-slate-200  flex flex-col lg:gap-10 lg:flex-row flex-wrap lg:flex-nowrap w-full mt-5 md:px-16 lg:px-24 py-5">
                     <div className="w-full lg:w-2/6">
@@ -16,7 +16,7 @@ export default function Footer() {
                             we have cloths that suits your style and which
                             you're proud to wear. From women to men.
                         </p>
-                        <div className="flex md:justify-between gap-5 justify-start">
+                        <div className="flex gap-5 justify-start">
                             <TwitterIcon />
                             <FacebookIcon />
                             <InstagramIcon />

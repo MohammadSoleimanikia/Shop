@@ -1,3 +1,5 @@
+import Button from "../UI/Button";
+
 export default function NewsLetterSubscription() {
     return (
         <section className="md:mx-16 lg:mx-24 flex flex-col md:flex-row bg-black text-white p-10 gap-4 lg:gap-20 text-4xl font-bold md:rounded-md">
@@ -11,9 +13,9 @@ export default function NewsLetterSubscription() {
                     placeholder="Enter Your Email address"
                     className="w-full bg-white rounded-4xl p-2"
                 />
-                <button className="w-full bg-white rounded-4xl p-2">
+                <Button type="light">
                     Subscribe to Newsletter
-                </button>
+                </Button>
             </form>
         </section>
     );
