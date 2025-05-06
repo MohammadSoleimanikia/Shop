@@ -2,7 +2,7 @@ export default function StarRating({ rating }) {
     const stars = [];
 
     for (let i = 1; i <= 5; i++) {
-        const fill = i <= rating ? "gold" : "gray";
+        const fill = i <= Math.ceil(rating) ? "gold" : "gray";
 
         stars.push(
             <svg
