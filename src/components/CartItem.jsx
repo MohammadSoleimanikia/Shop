@@ -1,11 +1,11 @@
 import { cartAction } from "@/store/cart";
 import { useDispatch } from "react-redux";
 export default function CartItem({ item }) {
-    const dispatch=useDispatch();
-    function increase(){
+    const dispatch = useDispatch();
+    function increase() {
         dispatch(cartAction.addToCart(item));
     }
-    function decrease(){
+    function decrease() {
         dispatch(cartAction.decreaseQuantity(item.id));
     }
     return (
@@ -28,8 +28,20 @@ export default function CartItem({ item }) {
 
                 {/* content */}
                 <div className="flex flex-col gap-2">
-                    <div className="flex justify-around text-xl font-semibold text-red-500  border-2 border-slate-200 rounded-md p-1">
-                        <span onClick={decrease} className="cursor-pointer">-</span> <p>{item.quantity}</p> <span onClick={increase} className="cursor-pointer">+</span>
+                    <div className="flex justify-between w-full text-xl font-semibold text-red-500  border-2 border-slate-200 rounded-md p-1">
+                        <span
+                            onClick={decrease}
+                            className="hover:bg-slate-200 rounded-l-md cursor-pointer h-full w-1/3 flex justify-center"
+                        >
+                            -
+                        </span>
+                        <p className="h-full w-1/3 flex justify-center">{item.quantity}</p>
+                        <span
+                            onClick={increase}
+                            className="hover:bg-slate-200 rounded-r-md cursor-pointer h-full w-1/3 flex justify-center"
+                        >
+                            +
+                        </span>
                     </div>
                     <p className="text-2xl font-semibold">${item.totalPrice}</p>
                 </div>
