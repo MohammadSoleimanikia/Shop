@@ -1,23 +1,33 @@
 import { useMemo } from "react";
+import { toast } from "sonner";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import StarRating from "../UI/StarRating";
-import Button from "../UI/Button";
+import StarRating from "../components/ui/StarRating";
+import Button from "../components/ui/Button";
 import ReviewSection from "../components/ReviewSection";
-import Gallery from "../UI/Gallery";
+import Gallery from "../components/ui/Gallery";
+import { cartAction } from "../store/cart";
+import { useDispatch } from "react-redux";
+
 export default function ProductDetail() {
     const { id } = useParams();
-
     const allItems = useSelector((state) => state.products.items);
     const selectedItem = useMemo(
         () => allItems.find((item) => item.id === Number(id)),
         [allItems, id]
     );
+
+    const dispatch = useDispatch();
+    function addToCartHandler() {
+        dispatch(cartAction.addToCart(selectedItem));
+        toast.success("Item added to the cart");
+    }
+
     return (
         <section>
             <div className="flex flex-col w-full  md:flex-row md:gap-10 mt-5">
-                <Gallery images={selectedItem.img}/>
-                
+                <Gallery images={selectedItem.img} />
+
                 {/* contents */}
                 <div className="w-full md:w-8/12 mx-5 md:mx-0 ">
                     <h2 className="text-3xl font-bold">{selectedItem.title}</h2>
@@ -47,7 +57,9 @@ export default function ProductDetail() {
                             type="number"
                             className="bg-gray-200 rounded-full"
                         />
-                        <Button type="dark">Add to Cart</Button>
+                        <Button onClick={addToCartHandler} type="dark">
+                            Add to Cart
+                        </Button>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import Button from "../UI/Button";
+import Button from "./ui/Button";
 
 export default function NewsLetterSubscription() {
     return (
@@ -13,9 +13,7 @@ export default function NewsLetterSubscription() {
                     placeholder="Enter Your Email address"
                     className="w-full bg-white rounded-4xl p-2"
                 />
-                <Button type="light">
-                    Subscribe to Newsletter
-                </Button>
+                <Button type="light">Subscribe to Newsletter</Button>
             </form>
         </section>
     );

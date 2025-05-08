@@ -6,4 +6,5 @@ Things that used in this project
 * redux and redux toolkit for global state management
 * upload image to supabase
 * using useMemo
-* react-image-gallery for product detail image
+* react-image-gallery for product detail image gallery
+* use Shadcn

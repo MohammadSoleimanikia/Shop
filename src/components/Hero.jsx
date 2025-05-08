@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "../UI/Button";
+import Button from "./ui/Button";
 export default function Hero() {
     return (
         <section className="text-black py-24 px-8 bg-slate-200">
@@ -10,10 +10,7 @@ export default function Hero() {
                 <p className="text-lg md:text-xl mb-6">
                     We offer amazing products and services just for you.
                 </p>
-                <Link
-                    to="/Products"
-                    
-                >
+                <Link to="/Products">
                     <Button type={"light"}>Explore Now</Button>
                 </Link>
             </div>

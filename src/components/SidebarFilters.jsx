@@ -1,6 +1,6 @@
-import AccordionElement from "../UI/AccordionElement";
-import ColorMenu from "../UI/ColorMenu";
-import PriceSlider from "../UI/PriceSlider";
+import AccordionElement from "./ui/AccordionElement";
+import ColorMenu from "./ui/ColorMenu";
+import PriceSlider from "./ui/PriceSlider";
 export default function SidebarFilters() {
     return (
         <aside className="rounded-md border-2 ml-2 border-slate-300 px-4  w-3/12 flex flex-col">
@@ -39,10 +39,14 @@ export default function SidebarFilters() {
                 <PriceSlider />
             </AccordionElement>
             <AccordionElement title="Colors">
-                <ColorMenu/>
+                <ColorMenu />
             </AccordionElement>
-            <button className="w-full mt-2 hover:bg-slate-900 p-1 mx-0.5 rounded-md bg-slate-800 text-white">Apply</button>
-            <button className="w-full mt-2 hover:bg-slate-300 p-1 mx-0.5 rounded-md bg-slate-200 ">Reset</button>
+            <button className="w-full mt-2 hover:bg-slate-900 p-1 mx-0.5 rounded-md bg-slate-800 text-white">
+                Apply
+            </button>
+            <button className="w-full mt-2 hover:bg-slate-300 p-1 mx-0.5 rounded-md bg-slate-200 ">
+                Reset
+            </button>
         </aside>
     );
 }

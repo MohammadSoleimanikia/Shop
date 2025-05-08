@@ -1,7 +1,7 @@
-import FacebookIcon from "../UI/Icons/FacebookIcon";
-import InstagramIcon from "../UI/Icons/InstagramIcon";
-import TwitterIcon from "../UI/Icons/TwitterIcon";
-import Logo from "../UI/Logo";
+import FacebookIcon from "./ui/Icons/FacebookIcon";
+import InstagramIcon from "./ui/Icons/InstagramIcon";
+import TwitterIcon from "./ui/Icons/TwitterIcon";
+import Logo from "./ui/Logo";
 import NewsLetterSubscription from "./NewsletterSubscription";
 
 export default function Footer() {
@@ -11,7 +11,7 @@ export default function Footer() {
                 <NewsLetterSubscription />
                 <div className="bg-slate-200  flex flex-col lg:gap-10 lg:flex-row flex-wrap lg:flex-nowrap w-full mt-5 md:px-16 lg:px-24 py-5">
                     <div className="w-full lg:w-2/6">
-                        <Logo/>
+                        <Logo />
                         <p className="font-light my-8">
                             we have cloths that suits your style and which
                             you're proud to wear. From women to men.
@@ -22,7 +22,7 @@ export default function Footer() {
                             <InstagramIcon />
                         </div>
                     </div>
-                    
+
                     <div className="flex md:w-4/6 gap-3 flex-wrap md:flex-nowrap mt-10">
                         <div className="w-3/12">
                             <h1 className="font-bold mb-5">Company</h1>
