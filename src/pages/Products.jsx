@@ -7,7 +7,7 @@ export default function Products() {
     const initialState = {
         gender: null,
         category: null,
-        price: [0, 1000000000000],
+        price: [0, 1000],
         colors: null,
     };
     const [filters, setFilters] = useState(initialState);

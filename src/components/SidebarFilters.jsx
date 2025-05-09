@@ -72,7 +72,7 @@ export default function SidebarFilters({
                 </AccordionElement>
 
                 <AccordionElement title="Price">
-                    <PriceSlider />
+                    <PriceSlider filters={filters} filtersHandler={filtersHandler}/>
                 </AccordionElement>
                 <AccordionElement title="Colors">
                     <ColorMenu />
