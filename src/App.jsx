@@ -45,7 +45,7 @@ function App() {
                         success:
                             "bg-green-100 text-green-800 border border-green-400 shadow-lg font-medium px-4 py-3 rounded-lg flex gap-3",
                         warning: "text-yellow-400",
-                        info: "bg-blue-400",
+                        info: "bg-blue-100 text-blue-800 border border-blue-400 shadow-lg font-medium px-4 py-3 rounded-lg flex gap-3 ",
                     },
                 }}
             />

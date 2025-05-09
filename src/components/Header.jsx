@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 
 export default function Header() {
     const cartCount = useSelector((state) => state.cart.items.length);
-    return (
+    return (<>
         <header
             className="
                     flex justify-between gap-1
@@ -34,7 +34,7 @@ export default function Header() {
                     Contact
                 </NavItem>
             </div>
-            <SearchBar />
+            <SearchBar className='hidden sm:flex'/>
             <div className="flex items-center gap-3 ">
                 <button className="p-1 border-[0.15rem] border-black rounded-full hover:bg-slate-200 cursor-pointer">
                     <User />
@@ -56,5 +56,7 @@ export default function Header() {
                 
             </div>
         </header>
+
+        </>
     );
 }

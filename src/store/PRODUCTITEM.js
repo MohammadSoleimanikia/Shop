@@ -1,20 +1,22 @@
-// Updated product data with unique values
+
+// Updated titles and categories to clothing-related items
 const PRODUCTS = [
     {
         id: 101,
-        title: "Men's Casual Sneakers",
+        gender: "Men",
+        title: "Men's Graphic T-Shirt",
         rating: 4.2,
-        price: 79.99,
+        price: 19.99,
         description:
-            "this graphic t-shirt is perfect for any occasion.Crafted from a soft and breathable fabric. offers superior comfort and style  ",
+            "This graphic t-shirt is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         colors: ["Blue", "Gray", "White"],
-        category: "Shoes",
+        category: "T-Shirts",
         img: [
             "/images/men/t-shirt-black.webp",
             "/images/men/t-shirt-cat.webp",
             "/images/men/t-shirt-cat.webp",
         ],
-        sizes: ["6", "7", "8", "9", "10"],
+        sizes: ["S", "M", "L", "XL"],
         reviews: [
             {
                 username: "johnDoe",
@@ -22,7 +24,7 @@ const PRODUCTS = [
                 rating: 4,
             },
             {
-                username: "sneakerFan",
+                username: "styleFan",
                 comment: "Stylish and affordable.",
                 rating: 5,
             },
@@ -30,27 +32,28 @@ const PRODUCTS = [
     },
     {
         id: 102,
-        title: "Women's Running Shoes",
+        gender: "Women",
+        title: "Women's Summer Dress",
         rating: 4.8,
-        price: 99.99,
+        price: 29.99,
         description:
-            "this graphic t-shirt is perfect for any occasion.Crafted from a soft and breathable fabric. offers superior comfort and style  ",
+            "This summer dress is lightweight and perfect for warm weather. Made with breathable fabric for all-day comfort.",
         colors: ["Pink", "White", "Black"],
-        category: "Shoes",
+        category: "Dresses",
         img: [
+            "/images/men/t-shirt-black.webp",
             "/images/men/t-shirt-cat.webp",
             "/images/men/t-shirt.webp",
-            "/images/men/t-shirt.webp",
         ],
-        sizes: ["5", "6", "7", "8", "9"],
+        sizes: ["XS", "S", "M", "L", "XL"],
         reviews: [
             {
                 username: "janeDoe",
-                comment: "Perfect for running, lightweight and durable.",
+                comment: "Perfect for summer, lightweight and stylish.",
                 rating: 5,
             },
             {
-                username: "runnerGirl",
+                username: "fashionista",
                 comment: "Love the design and comfort.",
                 rating: 5,
             },
@@ -58,23 +61,24 @@ const PRODUCTS = [
     },
     {
         id: 103,
-        title: "Kids' Sports Shoes",
+        gender: "Men",
+        title: "Kids' Hoodie",
         rating: 4.3,
-        price: 49.99,
+        price: 24.99,
         description:
-            "this graphic t-shirt is perfect for any occasion.Crafted from a soft and breathable fabric. offers superior comfort and style  ",
+            "This hoodie is cozy and perfect for kids. Made with soft fabric to keep them warm and comfortable.",
         colors: ["Red", "Yellow", "Blue"],
-        category: "Shoes",
+        category: "Hoodies",
         img: [
             "/images/men/t-shirt-black.webp",
+            "/images/men/t-shirt-cat.webp",
             "/images/men/t-shirt.webp",
-            "/images/men/t-shirt-black.webp",
         ],
-        sizes: ["3", "4", "5", "6"],
+        sizes: ["XS", "S", "M", "L"],
         reviews: [
             {
                 username: "parent123",
-                comment: "My kid loves these shoes!",
+                comment: "My kid loves this hoodie!",
                 rating: 5,
             },
             {
@@ -86,27 +90,28 @@ const PRODUCTS = [
     },
     {
         id: 104,
-        title: "Men's Hiking Boots",
+        gender: "Men",
+        title: "Men's Denim Jacket",
         rating: 4.7,
-        price: 129.99,
+        price: 49.99,
         description:
-            "this graphic t-shirt is perfect for any occasion.Crafted from a soft and breathable fabric. offers superior comfort and style  ",
-        colors: ["Brown", "Black"],
-        category: "Boots",
+            "This denim jacket is a classic wardrobe staple. Durable and stylish for any casual outing.",
+        colors: ["Blue", "Black"],
+        category: "Jackets",
         img: [
-            "/images/men/t-shirt.webp",
-            "/images/men/t-shirt.webp",
+            "/images/men/t-shirt-black.webp",
+            "/images/men/t-shirt-cat.webp",
             "/images/men/t-shirt.webp",
         ],
-        sizes: ["8", "9", "10", "11", "12"],
+        sizes: ["M", "L", "XL", "XXL"],
         reviews: [
             {
                 username: "outdoorGuy",
-                comment: "Perfect for hiking, very sturdy.",
+                comment: "Perfect for casual wear, very sturdy.",
                 rating: 5,
             },
             {
-                username: "trailLover",
+                username: "styleLover",
                 comment: "Comfortable and durable.",
                 rating: 4,
             },
@@ -114,55 +119,57 @@ const PRODUCTS = [
     },
     {
         id: 105,
-        title: "Women's Sandals",
+        gender: "Women",
+        title: "Women's Cardigan",
         rating: 4.6,
-        price: 39.99,
+        price: 34.99,
         description:
-            "this graphic t-shirt is perfect for any occasion.Crafted from a soft and breathable fabric. offers superior comfort and style  ",
+            "This cardigan is soft and cozy, perfect for layering during cooler weather.",
         colors: ["Beige", "White", "Black"],
-        category: "Sandals",
+        category: "Sweaters",
         img: [
-            "/images/men/t-shirt.webp",
-            "/images/men/t-shirt.webp",
+            "/images/men/t-shirt-black.webp",
+            "/images/men/t-shirt-cat.webp",
             "/images/men/t-shirt.webp",
         ],
-        sizes: ["5", "6", "7", "8", "9"],
+        sizes: ["S", "M", "L", "XL"],
         reviews: [
             {
-                username: "summerLover",
-                comment: "Great for summer, very comfortable.",
+                username: "cozyFan",
+                comment: "Great for layering, very comfortable.",
                 rating: 5,
             },
             {
-                username: "beachFan",
-                comment: "Stylish and lightweight.",
+                username: "fashionFan",
+                comment: "Stylish and warm.",
                 rating: 4,
             },
         ],
     },
     {
         id: 106,
-        title: "Unisex Flip Flops",
+        gender: "Unisex",
+        title: "Unisex Sweatpants",
         rating: 4.1,
         price: 19.99,
         description:
-            "this graphic t-shirt is perfect for any occasion.Crafted from a soft and breathable fabric. offers superior comfort and style  ",
-        colors: ["Green", "Blue", "Black"],
-        category: "Flip Flops",
+            "These sweatpants are comfortable and versatile, perfect for lounging or casual outings.",
+        colors: ["Gray", "Blue", "Black"],
+        category: "Pants",
         img: [
-            "/images/men/t-shirt.webp",
-            "/images/men/t-shirt.webp",
+            "/images/men/t-shirt-black.webp",
+            "/images/men/t-shirt-cat.webp",
             "/images/men/t-shirt.webp",
         ],
-        sizes: ["6", "7", "8", "9", "10"],
+        sizes: ["S", "M", "L", "XL"],
         reviews: [
             {
-                username: "beachWalker",
-                comment: "Affordable and comfortable for the beach.",
+                username: "comfortSeeker",
+                comment: "Affordable and comfortable for everyday wear.",
                 rating: 4,
             },
             {
-                username: "flipFlopFan",
+                username: "casualFan",
                 comment: "Good quality for the price.",
                 rating: 4,
             },
