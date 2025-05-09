@@ -12,7 +12,7 @@ export default function Header() {
         <header
             className="
                     flex justify-between gap-1
-                    py-3 shadow-md
+                    py-3 md:shadow-md
                     my-1 px-5
                     md:px-12 lg:px-16"
         >
@@ -34,7 +34,7 @@ export default function Header() {
                     Contact
                 </NavItem>
             </div>
-            <SearchBar className='hidden sm:flex'/>
+            <SearchBar className='hidden sm:flex w-5/12'/>
             <div className="flex items-center gap-3 ">
                 <button className="p-1 border-[0.15rem] border-black rounded-full hover:bg-slate-200 cursor-pointer">
                     <User />
@@ -56,7 +56,10 @@ export default function Header() {
                 
             </div>
         </header>
-
+        <div className="flex sm:hidden w-full shadow-md md:shadow-none justify-center py-5">
+            <SearchBar className='flex sm:hidden w-8/12'/>
+        </div>
+            
         </>
     );
 }

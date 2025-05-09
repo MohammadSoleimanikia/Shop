@@ -75,7 +75,7 @@ export default function SidebarFilters({
                     <PriceSlider filters={filters} filtersHandler={filtersHandler}/>
                 </AccordionElement>
                 <AccordionElement title="Colors">
-                    <ColorMenu />
+                    <ColorMenu filters={filters} filtersHandler={filtersHandler}/>
                 </AccordionElement>
                 <button
                     onClick={resetFilters}

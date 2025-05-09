@@ -9,7 +9,7 @@ const PRODUCTS = [
         price: 19.99,
         description:
             "This graphic t-shirt is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-        colors: ["Blue", "Gray", "White"],
+        colors: ["blue", "grey", "white"],
         category: "T-Shirts",
         img: [
             "/images/men/t-shirt-black.webp",
@@ -38,7 +38,7 @@ const PRODUCTS = [
         price: 29.99,
         description:
             "This summer dress is lightweight and perfect for warm weather. Made with breathable fabric for all-day comfort.",
-        colors: ["Pink", "White", "Black"],
+        colors: ["pink", "white", "black"],
         category: "Dresses",
         img: [
             "/images/men/t-shirt-black.webp",
@@ -67,7 +67,7 @@ const PRODUCTS = [
         price: 24.99,
         description:
             "This hoodie is cozy and perfect for kids. Made with soft fabric to keep them warm and comfortable.",
-        colors: ["Red", "Yellow", "Blue"],
+        colors: ["red", "Yellow", "Blue"],
         category: "Hoodies",
         img: [
             "/images/men/t-shirt-black.webp",
@@ -96,7 +96,7 @@ const PRODUCTS = [
         price: 49.99,
         description:
             "This denim jacket is a classic wardrobe staple. Durable and stylish for any casual outing.",
-        colors: ["Blue", "Black"],
+        colors: ["blue", "black"],
         category: "Jackets",
         img: [
             "/images/men/t-shirt-black.webp",
@@ -125,7 +125,7 @@ const PRODUCTS = [
         price: 34.99,
         description:
             "This cardigan is soft and cozy, perfect for layering during cooler weather.",
-        colors: ["Beige", "White", "Black"],
+        colors: ["beige", "white", "black"],
         category: "Sweaters",
         img: [
             "/images/men/t-shirt-black.webp",
@@ -154,7 +154,7 @@ const PRODUCTS = [
         price: 19.99,
         description:
             "These sweatpants are comfortable and versatile, perfect for lounging or casual outings.",
-        colors: ["Gray", "Blue", "Black"],
+        colors: ["grey", "blue", "black"],
         category: "Pants",
         img: [
             "/images/men/t-shirt-black.webp",
