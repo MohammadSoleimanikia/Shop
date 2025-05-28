@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "./ui/Button";
+import Button from "../ui/Button";
 export default function Hero() {
     return (
         <section className="text-black py-24 px-8 bg-slate-200">

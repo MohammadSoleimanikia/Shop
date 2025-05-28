@@ -1,6 +1,6 @@
-import AccordionElement from "./ui/AccordionElement";
-import ColorMenu from "./ui/ColorMenu";
-import PriceSlider from "./ui/PriceSlider";
+import AccordionElement from "../ui/AccordionElement";
+import ColorMenu from "../ui/ColorMenu";
+import PriceSlider from "../ui/PriceSlider";
 const categories = [
     "T-Shirts",
     "shirt",
@@ -19,7 +19,6 @@ export default function SidebarFilters({
     resetFilters,
     filters,
 }) {
-    console.log(filters);
     function selectedFilter(identifier, value) {
         return filters[identifier] === value;
     }
@@ -72,10 +71,16 @@ export default function SidebarFilters({
                 </AccordionElement>
 
                 <AccordionElement title="Price">
-                    <PriceSlider filters={filters} filtersHandler={filtersHandler}/>
+                    <PriceSlider
+                        filters={filters}
+                        filtersHandler={filtersHandler}
+                    />
                 </AccordionElement>
                 <AccordionElement title="Colors">
-                    <ColorMenu filters={filters} filtersHandler={filtersHandler}/>
+                    <ColorMenu
+                        filters={filters}
+                        filtersHandler={filtersHandler}
+                    />
                 </AccordionElement>
                 <button
                     onClick={resetFilters}

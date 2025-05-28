@@ -1,7 +1,7 @@
-import FacebookIcon from "./ui/Icons/FacebookIcon";
-import InstagramIcon from "./ui/Icons/InstagramIcon";
-import TwitterIcon from "./ui/Icons/TwitterIcon";
-import Logo from "./ui/Logo";
+import FacebookIcon from "../ui/Icons/FacebookIcon";
+import InstagramIcon from "../ui/Icons/InstagramIcon";
+import TwitterIcon from "../ui/Icons/TwitterIcon";
+import Logo from "../ui/Logo";
 import NewsLetterSubscription from "./NewsletterSubscription";
 
 export default function Footer() {

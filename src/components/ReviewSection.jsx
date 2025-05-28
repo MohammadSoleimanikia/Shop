@@ -1,4 +1,4 @@
-import StarRating from "./ui/StarRating";
+import StarRating from "../ui/StarRating";
 
 export default function ReviewSection({ reviews }) {
     return (

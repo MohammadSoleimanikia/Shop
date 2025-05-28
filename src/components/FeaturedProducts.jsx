@@ -1,4 +1,4 @@
-import Button from "./ui/Button";
+import Button from "../ui/Button";
 import ProductCard from "./ProductCard";
 
 export default function FeaturedProducts({ title, items }) {

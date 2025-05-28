@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import StarRating from "./ui/StarRating";
+import StarRating from "../ui/StarRating";
 
 export default function ProductCard({ item }) {
     return (

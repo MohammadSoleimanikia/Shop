@@ -6,7 +6,7 @@ export default function CartItem({ item }) {
         dispatch(cartAction.addToCart(item));
     }
     function decrease() {
-        dispatch(cartAction.decreaseQuantity(item.id));
+        dispatch(cartAction.decreaseQuantity({id:item.id,selectedSize:item.selectedSize,selectedColor:item.selectedColor}));
     }
     return (
         <article>
@@ -21,8 +21,10 @@ export default function CartItem({ item }) {
                         <h2 className="text-nowrap font-semibold">
                             {item.title}
                         </h2>
-                        <p>color: {item.colors[0]}</p>
-                        <p>size: {item.sizes[0]}</p>
+                        <p>color: {item.selectedColor}</p>
+                        <p>
+                            size:{item.selectedSize}
+                        </p>
                     </div>
                 </div>
 
@@ -35,7 +37,9 @@ export default function CartItem({ item }) {
                         >
                             -
                         </span>
-                        <p className="h-full w-1/3 flex justify-center">{item.quantity}</p>
+                        <p className="h-full w-1/3 flex justify-center">
+                            {item.quantity}
+                        </p>
                         <span
                             onClick={increase}
                             className="hover:bg-slate-200 rounded-r-md cursor-pointer h-full w-1/3 flex justify-center"

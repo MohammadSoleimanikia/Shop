@@ -1,12 +1,6 @@
 import "./App.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import Cart from "./components/Cart";
 import Home from "./pages/Home";
-import NewsLetterSubscription from "./components/NewsletterSubscription";
-import Pagination from "./components/Pagination";
-import ProductList from "./components/ProductList";
-import SidebarFilters from "./components/SidebarFilters";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/RootLayout";
 import Products from "./pages/Products";
@@ -14,10 +8,15 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import ProductDetail from "./pages/ProductDetail";
-import { Toaster } from "@/components/ui/sonner";
-
+import { Toaster } from "@/ui/sonner";
+import Login from "./pages/Login";
+import Admin from "./pages/AdminLayout";
+import User from "./pages/User";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Dashboard from "./pages/admin/DashboardPage";
+import ManageProducts from "./pages/admin/ManageProductsPage";
 function App() {
-    const router = createBrowserRouter([
+    const routerUser = createBrowserRouter([
         {
             path: "/",
             element: <RootLayout />,
@@ -27,17 +26,31 @@ function App() {
                 { path: "products", element: <Products /> },
                 { path: "aboutus", element: <AboutUs /> },
                 { path: "contact", element: <Contact /> },
-                { path: "cart", element: <Cart/> },
+                { path: "cart", element: <Cart /> },
                 { path: "products/:id", element: <ProductDetail /> },
+                { path: "login", element: <Login /> },
+                { path: "user", element: <User /> },
+            ],
+        },
+        {
+            path: "admin",
+            element: (
+                    <ProtectedRoute allowedRoles={["admin"]}>
+                        <Admin />
+                    </ProtectedRoute>
+            ),
+            children:[
+                {index:true,element:<Dashboard/>},
+                {path:"products",element:<ManageProducts/>}
             ],
         },
     ]);
 
     return (
         <>
-            <RouterProvider router={router} />
+            <RouterProvider router={routerUser} />
             <Toaster
-                position="top-right"
+                position="top-center"
                 toastOptions={{
                     unstyled: true,
                     classNames: {

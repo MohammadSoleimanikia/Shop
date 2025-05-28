@@ -15,14 +15,21 @@ const cartSlice = createSlice({
         // Add item to cart
         addToCart(state, action) {
             const newItem = action.payload;
+
+            // Create a unique key combining id, size, and color (fall back to empty string if undefined)
+            const itemKey = `${newItem.id}_${newItem.selectedSize || ""}_${newItem.selectedColor || ""}`;
+
+            // Find item matching the id and selected options
             const existingItem = state.items.find(
-                (item) => item.id === newItem.id
+                (item) =>
+                    `${item.id}_${item.selectedSize || ""}_${item.selectedColor || ""}` ===
+                    itemKey
             );
+
             state.totalQuantity++;
 
             if (existingItem) {
                 existingItem.quantity++;
-                console.log(newItem.price);
                 existingItem.totalPrice = addCurrency(
                     newItem.price,
                     existingItem.totalPrice
@@ -39,10 +46,18 @@ const cartSlice = createSlice({
             state.totalPrice = addCurrency(newItem.price, state.totalPrice);
         },
 
-        // Remove item completely
         removeFromCart(state, action) {
-            const id = action.payload;
-            const existingItem = state.items.find((item) => item.id === id);
+            const {
+                id,
+                selectedSize = "",
+                selectedColor = "",
+            } = action.payload;
+            const itemKey = `${id}_${selectedSize}_${selectedColor}`;
+            const existingItem = state.items.find(
+                (item) =>
+                    `${item.id}_${item.selectedSize || ""}_${item.selectedColor || ""}` ===
+                    itemKey
+            );
             if (!existingItem) return;
 
             state.totalQuantity -= existingItem.quantity;
@@ -51,13 +66,25 @@ const cartSlice = createSlice({
                 existingItem.totalPrice
             );
 
-            state.items = state.items.filter((item) => item.id !== id);
+            state.items = state.items.filter(
+                (item) =>
+                    `${item.id}_${item.selectedSize || ""}_${item.selectedColor || ""}` !==
+                    itemKey
+            );
         },
 
-        // Decrease item quantity
         decreaseQuantity(state, action) {
-            const id = action.payload;
-            const item = state.items.find((i) => i.id === id);
+            const {
+                id,
+                selectedSize = "",
+                selectedColor = "",
+            } = action.payload;
+            const itemKey = `${id}_${selectedSize}_${selectedColor}`;
+            const item = state.items.find(
+                (i) =>
+                    `${i.id}_${i.selectedSize || ""}_${i.selectedColor || ""}` ===
+                    itemKey
+            );
             if (!item) return;
 
             item.quantity--;
@@ -66,7 +93,12 @@ const cartSlice = createSlice({
             state.totalPrice = minusCurrency(state.totalPrice, item.price);
 
             if (item.quantity === 0) {
-                state.items = state.items.filter((i) => i.id !== id);
+                state.items = state.items.filter(
+                    (i) =>
+                        
+                        `${i.id}_${i.selectedSize || ""}_${i.selectedColor || ""}` !==
+                        itemKey
+                );
             }
         },
 

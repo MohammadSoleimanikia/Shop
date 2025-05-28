@@ -6,7 +6,7 @@ const colors = [
     "orange", // Orange
     "purple", // Purple
     "cyan", // Cyan
-    "pink", // Black
+    "blue", // Black
 ];
 export default function ColorMenu({filters,filtersHandler}) {
     return (
